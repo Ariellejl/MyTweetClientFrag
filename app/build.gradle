@@ -34,6 +34,7 @@ def dbflow_version = "4.0.3"
 dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     implementation 'com.codepath.libraries:android-oauth-handler:1.2.5'
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.0.2'
     // Glide for remote image loading
     implementation 'com.github.bumptech.glide:glide:3.8.0'
@@ -45,4 +46,7 @@ dependencies {
     implementation "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
     implementation "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
     implementation 'com.android.support:recyclerview-v7:27.0.2'
+    compile "com.android.support:design:27.0.2"
+
+
 }

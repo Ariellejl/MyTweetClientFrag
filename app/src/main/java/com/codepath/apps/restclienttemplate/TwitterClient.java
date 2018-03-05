@@ -24,8 +24,8 @@ import com.loopj.android.http.RequestParams;
 public class TwitterClient extends OAuthBaseClient {
 	public static final BaseApi REST_API_INSTANCE = TwitterApi.instance(); // Change this
 	public static final String REST_URL = "https://api.twitter.com/1.1"; // Change this, base API URL
-	public static final String REST_CONSUMER_KEY = "oeNJtDiaCy1xtv5A09ldA6ZBC";       // Change this
-	public static final String REST_CONSUMER_SECRET = "772YHOdVgtzV3azqeLg3xFmTn8SQy95s67rgSTr3wZmkz2dhQo"; // Change this
+	public static final String REST_CONSUMER_KEY = "7NplUBenABsTHlYUMiEZkD7lh";       // Change this
+	public static final String REST_CONSUMER_SECRET = "CHq4vtBZntjEXZAmmod9nzbwI81HbkVyxfxZscJ2I9gXJbYnf8"; // Change this
 
 	// Landing page to indicate the OAuth flow worked in case Chrome for Android 25+ blocks navigation back to the app.
 	public static final String FALLBACK_URL = "https://codepath.github.io/android-rest-client-template/success.html";
@@ -44,12 +44,41 @@ public class TwitterClient extends OAuthBaseClient {
 	// CHANGE THIS
 	// DEFINE METHODS for different API endpoints here
 	public void getHomeTimeLine(AsyncHttpResponseHandler handler) {
-		String apiUrl = getApiUrl("statses/home_timeline.json");
+		String apiUrl = getApiUrl("statuses/home_timeline.json");
 		// Can specify query string params directly or through RequestParams.
 		RequestParams params = new RequestParams();
 		params.put("count", "25");
 		params.put("since_id",1);
 		client.get(apiUrl, params, handler);
+	}
+
+	public void getMentionsTimeline(AsyncHttpResponseHandler handler) {
+		String apiUrl = getApiUrl("statuses/mentions_timeline.json");
+		// Can specify query string params directly or through RequestParams.
+		RequestParams params = new RequestParams();
+		params.put("count", "25");
+		params.put("since_id",1);
+		client.get(apiUrl, params, handler);
+	}
+
+
+	public void getUserTimeline(String screenName, AsyncHttpResponseHandler handler) {
+		String apiUrl = getApiUrl("statuses/user_timeline.json");
+		// Can specify query string params directly or through RequestParams.
+		RequestParams params = new RequestParams();
+		params.put("screen_ame", screenName);
+		params.put("count", "25");
+		//params.put("since_id",1);
+		client.get(apiUrl, params, handler);
+	}
+
+	public void getUserInfo(AsyncHttpResponseHandler handler) {
+		String apiUrl = getApiUrl("account/verify_credentials.json");
+		// Can specify query string params directly or through RequestParams.
+		//RequestParams params = new RequestParams();
+		//params.put("count", "25");
+		//params.put("since_id",1);
+		client.get(apiUrl, null, handler);
 	}
 
 	/* 1. Define the endpoint URL with getApiUrl and pass a relative path to the endpoint
