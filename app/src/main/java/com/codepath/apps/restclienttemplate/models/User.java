@@ -32,7 +32,8 @@ public class User {
         user.profileImageUrl=json.getString("profile_image_url");
         user.tagLine=json.getString("description");
         user.followersCount=json.getInt("followers_count");
-        user.followingCount=json.getInt("following_count");
+        if(!json.isNull("following_count"))
+            user.followingCount=json.getInt("following_count");
         return user;
     }
 }

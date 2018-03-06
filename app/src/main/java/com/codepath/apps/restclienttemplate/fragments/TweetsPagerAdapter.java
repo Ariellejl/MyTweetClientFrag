@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 /**
- * Created by Alain Etienne on 03-Mar-18.
+ * Created by Arielle on 03-Mar-18.
  */
 
 public class TweetsPagerAdapter extends FragmentPagerAdapter {

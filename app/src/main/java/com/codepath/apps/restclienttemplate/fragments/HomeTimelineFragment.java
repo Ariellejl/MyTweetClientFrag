@@ -13,10 +13,6 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
-/**
- * Created by Alain Etienne on 03-Mar-18.
- */
-
 public class HomeTimelineFragment extends TweetsListFragment {
     TwitterClient client;
 
@@ -43,13 +39,13 @@ public class HomeTimelineFragment extends TweetsListFragment {
 
                 //iterate trought the JSON array
                 //for each entry, deserialyze the JSON object
-                for (int i = 0; i < response.length(); i++) {
+                //for (int i = 0; i < response.length(); i++) {
                     //convert each object to a Tweet model
                     //add that tweet model to our data source
                     //notify the adapter that we've added an item
 
 
-                }
+                //}
             }
 
             @Override

@@ -13,9 +13,6 @@ import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import java.util.List;
 
-/**
- * Created by Ing paulin on 2/24/2018.
- */
 
 public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
 

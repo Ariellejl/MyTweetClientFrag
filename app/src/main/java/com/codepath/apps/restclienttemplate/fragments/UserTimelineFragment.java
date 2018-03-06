@@ -14,7 +14,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 /**
- * Created by Alain Etienne on 03-Mar-18.
+ * Created by Arielle on 03-Mar-18.
  */
 
 public class UserTimelineFragment extends TweetsListFragment {

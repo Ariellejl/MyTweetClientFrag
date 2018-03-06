@@ -39,17 +39,17 @@ public class MentionTimelineFragment extends TweetsListFragment {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 addItems(response);
-                //    Log.d("TwitterClient",response.toString());
+                    //Log.d("TwitterClient",response.toString());
 
                 //iterate trought the JSON array
                 //for each entry, deserialyze the JSON object
-                for (int i = 0; i < response.length(); i++) {
+                //for (int i = 0; i < response.length(); i++) {
                     //convert each object to a Tweet model
                     //add that tweet model to our data source
                     //notify the adapter that we've added an item
 
 
-                }
+               // }
             }
 
             @Override
